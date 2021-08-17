@@ -54,7 +54,6 @@ Contact information for questions:
   `;
 
 // Prompt responses 
-
 inquirer
   .prompt([
     {
@@ -102,6 +101,7 @@ inquirer
 
   .then((answers) => {
     function generateBadge (license) {
+      // generate license badge
       switch(license) {
         case "BSD 3-Clause License":
           badge = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
@@ -117,10 +117,10 @@ inquirer
           break;
       }
     }
-  
     generateBadge(answers.license);
-    const READMEPageContent = generateREADME(answers);
 
+    // generate README
+    const READMEPageContent = generateREADME(answers);
     fs.writeFile('README.md', READMEPageContent, (err) =>
       err ? console.log(err) : console.log('Successfully created README.md!')
     );
