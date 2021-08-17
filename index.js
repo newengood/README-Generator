@@ -2,47 +2,48 @@ const inquirer = require('inquirer');
 const fs = require('fs');
 
 const generateREADME = (answers) =>
-  `# ${answers.title}
+  `
+# ${answers.title}
 
-  ## Table of Contents
+## Table of Contents
   
-    1. Description
-    2. Installation
-    3. Usage
-    4. License
-    5. Contributing Guidelines
-    6. Test Instructions
-    7. Questions
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Contributing Guidelines](#contributing-guidelines)
+6. [Test Instructions](#test-instructions)
+7. [Questions](#questions)
   
-  ### 1. Description
+## Description
 
-    *${answers.description}
+* ${answers.description}
   
-  ### 2. Installation
+## Installation
 
-    *${answers.installation}
+* ${answers.installation}
 
-  ### 3. Usage
+## Usage
 
   
-  ### 4. License
+## License
   
-    *${answers.license}
+* ${answers.license}
   
-  ### 5. Contributing Guidelines
+## Contributing Guidelines
 
-    *${answers.contributionGuidelines}
+* ${answers.contributingGuidelines}
 
-  ### 6. Test Instructions
+## Test Instructions
 
-    *${answers.testInstructions}
+* ${answers.testInstructions}
   
-  ### 7. Questions
+## Questions
 
-  Contact information for questions:
+Contact information for questions:
 
-    *Email: ${answers.email}
-    *Github: ${answers.github}
+* Email: ${answers.email}
+* Github: ${answers.github}
   
   `;
 
@@ -67,7 +68,7 @@ inquirer
       type: 'list',
       name: 'license',
       message: 'Select a License: ',
-      choices: ["Academic Free License v3.0", "Creative Commons license family", "MIT, Do What The F*ck You Want To Public License"],
+      choices: ["Academic Free License v3.0", "Creative Commons license family", "MIT", "Do What The F*ck You Want To Public License"],
     },
     {
       type: 'input',
