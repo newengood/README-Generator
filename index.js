@@ -1,8 +1,14 @@
+// Import dependencies
 const inquirer = require('inquirer');
 const fs = require('fs');
 
+// declare global variables
+let badge;
+
+// generate README
 const generateREADME = (answers) =>
-  `
+
+`${badge}
 # ${answers.title}
 
 ## Table of Contents
@@ -43,9 +49,11 @@ const generateREADME = (answers) =>
 Contact information for questions:
 
 * Email: ${answers.email}
-* Github: ${answers.github}
+* Github: https://github.com/${answers.github}
   
   `;
+
+// Prompt responses 
 
 inquirer
   .prompt([
@@ -68,7 +76,7 @@ inquirer
       type: 'list',
       name: 'license',
       message: 'Select a License: ',
-      choices: ["Academic Free License v3.0", "Creative Commons license family", "MIT", "Do What The F*ck You Want To Public License"],
+      choices: ["BSD 3-Clause License", "Creative Commons license family", "MIT", "Mozilla Public License 2.0"],
     },
     {
       type: 'input',
@@ -91,7 +99,26 @@ inquirer
       message: 'Enter your email address: ',
       },
   ])
+
   .then((answers) => {
+    function generateBadge (license) {
+      switch(license) {
+        case "BSD 3-Clause License":
+          badge = "[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)";
+          break;
+        case "Creative Commons license family":
+          badge = "[![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)";
+          break;
+        case "MIT":
+          badge = "[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)";
+          break;
+        case "Mozilla Public License 2.0":
+          badge = "[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)";
+          break;
+      }
+    }
+  
+    generateBadge(answers.license);
     const READMEPageContent = generateREADME(answers);
 
     fs.writeFile('README.md', READMEPageContent, (err) =>

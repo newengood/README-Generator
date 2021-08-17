@@ -1,5 +1,5 @@
-
-# 
+[![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
+# Title
 
 ## Table of Contents
   
@@ -13,32 +13,32 @@
   
 ## Description
 
-* 
+* Description
   
 ## Installation
 
-* 
+* install this way
 
 ## Usage
 
   
 ## License
   
-* Academic Free License v3.0
+* Creative Commons license family
   
 ## Contributing Guidelines
 
-* 
+* how to
 
 ## Test Instructions
 
-* 
+* test this
   
 ## Questions
 
 Contact information for questions:
 
-* Email: 
-* Github: 
+* Email: email
+* Github: https://github.com/github
   
   
