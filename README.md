@@ -1,5 +1,5 @@
-[![License: CC BY 4.0](https://licensebuttons.net/l/by/4.0/80x15.png)](http://creativecommons.org/licenses/by/4.0/)
-# Title
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+# Professional README Generator
 
 ## Table of Contents
   
@@ -13,32 +13,33 @@
   
 ## Description
 
-* Description
+* Create a command-line application that dynamically generates a professional README.md file from a user's input using the Inquirer package.
   
 ## Installation
 
-* install this way
+* Clone the repository, install npm using npm init -y, then install inquirer using npm install inquirer.
 
 ## Usage
 
-  
+![usage](./assets/usage.gif)
+
 ## License
   
-* Creative Commons license family
+* MIT
   
 ## Contributing Guidelines
 
-* how to
+* Fork the repository, commit contributions, then create a pull request.
 
 ## Test Instructions
 
-* test this
+* Fork the repository, create tests, then submit an issue. 
   
 ## Questions
 
 Contact information for questions:
 
-* Email: email
-* Github: https://github.com/github
+* Email: taylor@newengood.com
+* Github: https://github.com/newengood
   
   
